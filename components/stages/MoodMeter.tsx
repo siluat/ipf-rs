@@ -19,7 +19,7 @@ export function MoodMeter() {
     let postgresChannel: RealtimeChannel;
 
     postgresChannel = supabaseClient
-      .channel("schema-db-changes")
+      .channel("mood-selected")
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public" },
@@ -36,6 +36,10 @@ export function MoodMeter() {
         }
       )
       .subscribe();
+
+    return () => {
+      postgresChannel && supabaseClient.removeChannel(postgresChannel);
+    };
   }, []);
 
   return (
