@@ -44,6 +44,9 @@ export function MoodMeter() {
 
   return (
     <>
+      <h1 className={`text-scale-1200 text-center`}>
+        여러분들의 지금 이 순간 또는 오늘의 기분은?
+      </h1>
       <div className={`grid grid-cols-10 gap-2 gap-x-0.5 min-w-max`}>
         <MoodBox
           ko="격분한"
