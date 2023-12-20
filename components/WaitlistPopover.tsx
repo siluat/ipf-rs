@@ -8,6 +8,7 @@ import { Senior } from "./stages/Senior";
 import { NextRs } from "./stages/NextRs";
 import { PickRandomMember } from "./stages/PickRandomMember";
 import { ShareYourThink } from "./stages/ShareYourThink";
+import { ShareYourPicture } from "./stages/ShareYourPicture";
 
 interface Props {
   stage: string;
@@ -29,6 +30,7 @@ const WaitlistPopover: FC<Props> = ({ stage }) => {
       {stage === "next-rs" && <NextRs />}
       {stage === "random" && <PickRandomMember />}
       {stage === "share" && <ShareYourThink />}
+      {stage === "share-picture" && <ShareYourPicture />}
     </div>
   );
 };
