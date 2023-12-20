@@ -5,6 +5,9 @@ import { MoodMeter } from "./stages/MoodMeter";
 import { KimrikaToon } from "./stages/KimrikaToon";
 import { Prolog } from "./stages/Prolog";
 import { Senior } from "./stages/Senior";
+import { NextRs } from "./stages/NextRs";
+import { PickRandomMember } from "./stages/PickRandomMember";
+import { ShareYourThink } from "./stages/ShareYourThink";
 
 interface Props {
   stage: string;
@@ -23,6 +26,9 @@ const WaitlistPopover: FC<Props> = ({ stage }) => {
       {stage === "rika" && <KimrikaToon />}
       {stage === "prolog" && <Prolog />}
       {stage === "senior" && <Senior />}
+      {stage === "next-rs" && <NextRs />}
+      {stage === "random" && <PickRandomMember />}
+      {stage === "share" && <ShareYourThink />}
     </div>
   );
 };
